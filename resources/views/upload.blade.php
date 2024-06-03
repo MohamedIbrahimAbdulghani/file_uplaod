@@ -9,7 +9,7 @@
 <body>
 
 <div class="container">
-    <form action="{{route('upload.storeUsers')}}" method="POST" enctype="multipart/form-data">
+    <form action="{{route('upload.storeAdmins')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <h1 class="text-center">Upload File</h1>
             <input class="form-control form-control-lg" type="file" name="photo">

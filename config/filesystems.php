@@ -46,7 +46,7 @@ return [
 
         'UploadFileByLaravel' => [
             'driver' => 'local',
-            'root' => public_path('app/public'),
+            'root' => public_path('images'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
             'throw' => false,

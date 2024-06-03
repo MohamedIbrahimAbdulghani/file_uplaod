@@ -8,6 +8,6 @@ trait UploadFileTrait {
         $uploaded_file_location = $request->file("photo");
         $file_name = $uploaded_file_location->getClientOriginalName();
         $path = $uploaded_file_location->storeAs($folderName, $file_name, "UploadFileByLaravel");
-        return back();
+        return $path;
     }
 }

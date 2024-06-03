@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\File;
 use App\Traits\UploadFileTrait;
 use Illuminate\Http\Request;
 
@@ -13,10 +14,14 @@ class UploadFileController extends Controller
     }
 
     public function storeUsers(Request $request) {
-        return $this->UploadFile($request, "Users");
+        $path = $this->UploadFile($request, "Users");
+        File::create([
+            'path'=>$path,
+        ]);
+        return back();
     }
 
     public function storeAdmins(Request $request) {
-        return $this->UploadFile($request, "Admins");
+        $path = $this->UploadFile($request, "Admins");
     }
 }

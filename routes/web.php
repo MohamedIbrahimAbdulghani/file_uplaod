@@ -20,3 +20,4 @@ Route::get('/', function () {
 Route::get('/show', [UploadFileController::class, "show"])->name("upload.show");
 Route::post('/storeUsers', [UploadFileController::class, "storeUsers"])->name("upload.storeUsers");
 Route::post('/storeAdmins', [UploadFileController::class, "storeAdmins"])->name("upload.storeAdmins");
+Route::get('show/images', [UploadFileController::class, "index"])->name("show/images");
